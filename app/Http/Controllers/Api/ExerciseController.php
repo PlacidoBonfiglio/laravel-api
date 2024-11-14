@@ -10,11 +10,9 @@ class ExerciseController extends Controller
 {
     public function index() {
         $exercises = Exercise::all();
-        return response()->json(
-            [
+        return response()->json([
                 "success" => true,
                 "results" => $exercises
-            ]
-        );
+            ]);
     }
 }
